@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML com JS</title>
-    <link rel="stylesheet" href="./main.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Satisfação salarial da empresa</h1>
-        <form id="form_salarios">
-            <input type="number" id="salario_atual" required placeholder="Seu salário atual" />
-            <input type="number" id="salario_almejado" required placeholder="Salário almejado" />
-            <button id="btn_enviar" type="submit">Enviar pesquisa</button>
-        </form>
-        <p class="sucess_message">
-        </p>
-        <p class="error_message">O seu salário atual não pode ser maior que o salário almejado.</p>
-    </div>
-    <script src="./main.js"></script>
+  <main>
+    <h1>Lista de tarefas com Jquery</h1>
+    <form>
+      <input type="text" name="Tarefa a ser adicionada" id="tarefa-para-adicionar"
+        placeholder="Tarefa que deseja inserir" required>
+      <button type="submit">Inserir tarefa a lista</button>
+    </form>
+
+    <ul id="lista">
+    </ul>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>

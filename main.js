@@ -1,53 +1,14 @@
-// Variáveis globais
-const form = document.getElementById("form_salarios");
-const salarioAlmejado = document.getElementById("salario_almejado");
-const salarioAtual = document.getElementById("salario_atual");
-
-let formEValido = false;
-
-// Comparando os valores dos inputs
-function primeiroMaiorQueSegundo(salarioAtual, salarioAlmejado) {
-  return parseInt(salarioAtual) < parseInt(salarioAlmejado);
-}
-
-// Verificando o submit do usuário e passando a mensagem
-form.addEventListener("submit", (e) => {
+$("form").on("submit", function (e) {
   e.preventDefault();
+  const tarefa = $("#tarefa-para-adicionar").val();
 
-  const mensagemFormularioAprovado = `Você atualmente tem um salário de <strong>R$${salarioAtual.value}</strong> e deseja um salário de <strong>R$${salarioAlmejado.value}</strong>`;
+  const itemLista = `<li class="item-lista">${tarefa}</li>`;
 
-  formEValido = primeiroMaiorQueSegundo(
-    salarioAtual.value,
-    salarioAlmejado.value
-  );
+  $("main ul").append(itemLista);
 
-  if (formEValido) {
-    let mensagemSucesso = document.querySelector(".sucess_message");
-    mensagemSucesso.innerHTML = mensagemFormularioAprovado;
-    mensagemSucesso.style.display = "block";
-
-    salarioAtual.value = "";
-    salarioAlmejado.value = "";
-  } else {
-    let mensagemErro = document.querySelector(".error_message");
-    mensagemErro.style.display = "block";
-  }
+  $("#tarefa-para-adicionar").val("")
 });
 
-// Mostrando ou tirando a mensagem de erro caso esteja incorreto
-salarioAlmejado.addEventListener("keyup", (e) => {
-  if (!primeiroMaiorQueSegundo(salarioAtual.value, e.target.value)) {
-    let mensagemErro = document.querySelector(".error_message");
-    mensagemErro.style.display = "block";
-    salarioAlmejado.classList.remove("okay");
-    salarioAlmejado.classList.add("error");
-
-    let mensagemSucesso = document.querySelector(".sucess_message");
-    mensagemSucesso.style.display = "none";
-  } else {
-    let mensagemErro = document.querySelector(".error_message");
-    mensagemErro.style.display = "none";
-    salarioAlmejado.classList.remove("error");
-    salarioAlmejado.classList.add("okay");
-  }
+$("ul").on("click", function (e) {
+  $(e.target).addClass("clicado");
 });
