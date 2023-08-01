@@ -1,30 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jQuery</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugins do Jquery</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <main>
-    <h1>Lista de tarefas com Jquery</h1>
-    <form>
-      <input type="text" name="Tarefa a ser adicionada" id="tarefa-para-adicionar"
-        placeholder="Tarefa que deseja inserir" required>
-      <button type="submit">Inserir tarefa a lista</button>
-    </form>
+    <main>
+        <div class="container">
+            <h1>Obrigado por comprar conosco!</h1>
+            <img src="https://i.redd.it/guu752sow2v51.png" alt="mapa cidade Night City">
+            <h2>Onde devemos entregar o produto?</h2>
 
-    <ul id="lista">
-    </ul>
-  </main>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="./main.js"></script>
+
+            <form>
+                <div class="form-inputs">
+                    <label for="nomeCompleto">Nome Completo</label>
+                    <input type="text" name="nomeCompleto" id="nomeCompleto">
+                </div>
+                <div class="form-inputs">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-inputs">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" name="telefone" id="telefone">
+                </div>
+                <div class="form-inputs">
+                    <label for="CPF">CPF</label>
+                    <input type="text" name="CPF" id="CPF">
+                </div>
+                <div class="form-inputs">
+                    <label for="endereco">Endereço completo</label>
+                    <input type="text" name="endereco" id="endereco">
+                </div>
+                <div class="form-inputs">
+                    <label for="CEP">CEP</label>
+                    <input type="text" name="CEP" id="CEP">
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
