@@ -5,62 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plugins do Jquery</title>
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./main.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <h1>Obrigado por comprar conosco!</h1>
-            <img src="https://i.redd.it/guu752sow2v51.png" alt="mapa cidade Night City">
-            <h2>Onde devemos entregar o produto?</h2>
+    <form class="p-5">
+        <h1 class="text-warning mb-4">Formulário de envio</h1>
+        <label class="form-label" for="nome">Seu Nome: </label>
+        <input class="form-control mb-4" type="text" name="nome" id="nome" placeholder="Seu nome">
 
+        <label class="form-label" for="email">Seu Email: </label>
+        <input class="form-control mb-4" type="email" name="email" id="email" placeholder="Seu email">
 
-            <form>
-                <div class="form-inputs">
-                    <label for="nomeCompleto">Nome Completo</label>
-                    <input type="text" name="nomeCompleto" id="nomeCompleto">
-                </div>
-                <div class="form-inputs">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="form-inputs">
-                    <label for="telefone">Telefone</label>
-                    <input type="text" name="telefone" id="telefone">
-                </div>
-                <div class="form-inputs">
-                    <label for="CPF">CPF</label>
-                    <input type="text" name="CPF" id="CPF">
-                </div>
-                <div class="form-inputs">
-                    <label for="endereco">Endereço completo</label>
-                    <input type="text" name="endereco" id="endereco">
-                </div>
-                <div class="form-inputs">
-                    <label for="CEP">CEP</label>
-                    <input type="text" name="CEP" id="CEP">
-                </div>
+        <label class="form-label" for="telefone">Seu Telefone: </label>
+        <input class="form-control mb-4" type="telefone" name="telefone" id="telefone" placeholder="Seu telefone">
 
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </main>
-
-
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/jquery.mask.min.js"></script>
-    <script src="./js/jquery.validate.min.js"></script>
-    <script src="./js/messages_pt_BR.js"></script>
-    <script src="./js/main.js"></script>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
