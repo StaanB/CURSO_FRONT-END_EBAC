@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch source/main.sass:build/main.css",
+    "less": "less-watch-compiler ./src/styles ./build/styles main.less",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +14,8 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
+    "less": "^4.2.0",
+    "less-watch-compiler": "^1.16.3",
     "node-sass": "^9.0.0",
     "sass": "^1.65.1"
   },
