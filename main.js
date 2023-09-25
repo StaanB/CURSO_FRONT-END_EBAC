@@ -1,20 +1,45 @@
-$(document).ready(function () {
-    const endpoint = "https://api.github.com/users/staanb"
+function Carro(marca, ano) {
+    this.marca = marca
+    this.ano = ano
+}
 
-    fetch(endpoint)
-    .then((res) => {
-        return res.json()
-    })
-    .then((json) => {
-        // Colocando os textos e os links corretamente
-        $("#profile-avatar").attr("src", json.avatar_url)
-        $("#profile-name").text(json.name)
-        $("#profile-username").text(`@${json.login}`)
-        $("#repository-number").text(json.public_repos)
-        $("#followers-number").text(json.followers)
-        $("#follow-number").text(json.following)
-    })
-    .catch((err) => {
-        alert("Ocorreu um erro na requisição")
-    })
-});
+function Esportivo(marca, modelo, ano, velocidadeMaxima = 180) {
+    Carro.call(this, marca, ano)
+    this.modelo = modelo
+
+    var _velocidadeMaxima = velocidadeMaxima
+
+    this.getVelocidadeMaxima = function () {
+        return `Esse carro alcança até ${_velocidadeMaxima} Km/h`
+    }
+}
+
+function Suv(marca, modelo, ano, maximoDeLugares = 5) {
+    Carro.call(this, marca, ano)
+    this.modelo = modelo
+
+    var _maximoDeLugares = maximoDeLugares
+
+    this.getMaximoDeLugares = function () {
+        return `Esse carro tem ${_maximoDeLugares} lugares internos.`
+    }
+}
+
+function Classico(marca, modelo, ano, estadoDeConservacao = "Normal") {
+    Carro.call(this, marca, ano)
+    this.modelo = modelo
+
+    var _estadoDeConservacao = estadoDeConservacao
+
+    this.getEstadoConservacao = function () {
+        return `Esse carro está ${_estadoDeConservacao}.`
+    }
+}
+
+const Esportivo1 = new Esportivo("Lamborghini", "Lamborghini Aventator", "2020", 355)
+const Suv1 = new Suv("Fiat", "Doblô", "2023")
+const Classico1 = new Classico("Mustang", "Shelby", "1967", "bem conservado")
+
+console.log(Esportivo1.getVelocidadeMaxima());
+console.log(Suv1.getMaximoDeLugares());
+console.log(Classico1.getEstadoConservacao());
